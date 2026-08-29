@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.xltrs.commandadjust.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CommandsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

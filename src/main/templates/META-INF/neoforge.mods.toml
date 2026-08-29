@@ -1,0 +1,14 @@
+modLoader="javafml"
+loaderVersion="[0,)"
+license="MIT"
+
+[[mods]]
+modId="commandadjust"
+
+version="1.0.1-1.21.1"
+displayName="Command Adjust"
+authors="Xltrs"
+description="A simple but useful command and operator adjust mod."
+
+[[mixins]]
+config="commandadjust.mixins.json"
