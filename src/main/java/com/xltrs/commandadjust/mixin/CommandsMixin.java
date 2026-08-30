@@ -36,7 +36,7 @@ public abstract class CommandsMixin {
                 int InnerConfigLevel = CheckCommand.ConfigLevel(InnerCommand);
                 int InnerRawLevel = CheckCommand.RawLevel(InnerCommand);
                 if (InnerRawLevel == -1) { //不存在的指令检查
-                    Debug.show("[Command Run] Intercepted a execute command run not exist commandl");
+                    Debug.show("[Command Run] Intercepted a execute command run not exist command");
                     ci.cancel();
                     return;
                 }
