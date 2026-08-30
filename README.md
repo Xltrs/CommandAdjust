@@ -31,7 +31,7 @@ Just use these command:
 
 ## 😮 What are they each used for?
 ### "setcmdlevel" command 🔧
-It can **modify any commands permission level**😄,for example this example🧐,it **can modify** "give" command** permission level *to 0*🔧,*then everyone can use it*:
+It can **modify any commands permission level**😄,for example this example🧐,it **can modify** "give" command permission level *to 0*🔧,*then everyone can use it*:
 ```
 /setcmdlevel give 0
 ```
