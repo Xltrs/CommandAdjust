@@ -6,7 +6,7 @@ This is a **command permission level modify** and **operator adjust** mod,**feat
 - 🧷 **Highly configurable**.
 - 🔒 **Security**.
 
-## 😃 Please take note before using this mod
+## 😃 Please take note before using this mod!
 🔗 This mod is based on **minecraft original permission level system**,so **you need know**:
 -  Minecraft have **5 permission levels**
    - Like : 0(All)🤓,1(Moderator)😄,2(Gamemaster)🤠,3(Admin)😎,4(Owner)😇
@@ -31,11 +31,11 @@ Just use these command:
 
 ## 😮 What are they each used for?
 ### "setcmdlevel" command 🔧
-It can **modify any commands permission level**😄,for example this example🧐,it **can modify** "give" command permission level *to 0*🔧,*then everyone can use it*:
+It can **modify any commands permission level**😄,for example this example🧐,it **can modify** "give" command permission level **to 0**🔧,**then everyone can use it**:
 ```
 /setcmdlevel give 0
 ```
-**But just please note**🤨,it **can't modify** any *level 4* commands😏,for example this example,*It won't work*:
+**But just please note**🤨,it **can't modify** any **level 4** commands😏,for example this example,**It won't work**:
 
 ```
 /setcmdlevel stop 0
@@ -115,5 +115,5 @@ Can't say who is the **best**,need **depends** on your **situation**😄. If you
 ### Why don't support multiple language🤨?
 **Because** this mod is **server-side** mod,support **multiple language** will be **a bit hard**😅,but i will **support** multiple language **in future**😉.
 
-### Why "checkcmdlevel" command to lie with your eyes wide open? It although say a command not exist in game,but that command is exist in game😱.
+### Why "checkcmdlevel" command is work abnormality? although it say a command not exist in game,but that command is exist in game! 😱
 Do you use this mod in **Singleplayer**? This mod will **appear this bug** in singleplayer **at sometime**,you can **check debug log** to **figure out the problem** 🤗.
