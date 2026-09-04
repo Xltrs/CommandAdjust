@@ -5,7 +5,7 @@ license="MIT"
 [[mods]]
 modId="commandadjust"
 
-version="1.0.1-1.21.1"
+version="1.0.5-1.21.1"
 displayName="Command Adjust"
 authors="Xltrs"
 description="A simple but useful command and operator adjust mod."

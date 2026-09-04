@@ -1,0 +1,14 @@
+{
+  "commandadjust.command.not.exist": "%s command is not exist",
+  "commandadjust.command.not.existinconfig": "%s command is not exist in config",
+  "commandadjust.command.cannot.modify.level4command": "Can't modify %s command,because it is level 4 command",
+  "commandadjust.command.cannot.configleveltorawlevel": "Can't modify %s command config level(%s) to raw level(%s)",
+  "commandadjust.command.modify.level.success": "Modify %s command at Level %s success",
+  "commandadjust.command.modify.execute.warning": "But just be advised,modify execute command to below level 2 can let player use some bug to run any command",
+  "commandadjust.command.cannot.del.level4command.config": "Can't delete %s command config,because it is level 4 command",
+  "commandadjust.command.del.config.success": "Delete %s command config success",
+  "commandadjust.command.check.rawlevel": "%s command raw level is %s",
+  "commandadjust.command.check.configlevel.cmdnotexistingame": "%s command config level is %s ,but %s command is not exist in game",
+  "commandadjust.command.check.configlevel": "%s command config level is %s",
+  "commandadjust.command.checklist": "[Command Level Config List]"
+}

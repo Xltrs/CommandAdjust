@@ -41,6 +41,7 @@ public class Config {
                         } catch (NumberFormatException e) {
                             return false;
                         }
-                    });
+                    }
+            );
     static final ModConfigSpec SPEC = BUILDER.build();
 }
