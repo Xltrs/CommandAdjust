@@ -2,7 +2,9 @@ package com.xltrs.multilinguallib;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.mojang.logging.LogUtils;
 import net.neoforged.fml.ModList;
+import org.slf4j.Logger;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -16,7 +18,7 @@ public class MultilingualService {
 
     //注册多语言
     public static void Register(String client) {
-        Debug.show("[MultilingualLib] Register %s mod multilingual service", client);
+        ShowDebugInfo("[MultilingualLib] Register %s mod multilingual service", client);
         //因为客户端模组是不知道自己jar路径的，为了给开发者省事就自己查询了awa，输个modid不难吧？
         try (ZipFile ClientJar = new ZipFile(ModList.get().getModFileById(client).getFile().getFilePath().toFile())) {
             String ClientEntry = "assets/" + client + "/lang/";
@@ -33,13 +35,13 @@ public class MultilingualService {
                                     }.getType());
                                     MultilingualCache.computeIfAbsent(Language, k -> new HashMap<>()).putAll(Key);
                                 } catch (Exception ex) {
-                                    Debug.show("[MultilingualLib] Register %s mod multilingual service failed", client);
+                                    ShowDebugInfo("[MultilingualLib] Register %s mod multilingual service failed", client);
                                     ex.printStackTrace();
                                 }
                             }
                     );
         } catch (IOException e) {
-            Debug.show("[MultilingualLib] Register %s mod multilingual service failed", client);
+            ShowDebugInfo("[MultilingualLib] Register %s mod multilingual service failed", client);
             e.printStackTrace();
         }
     }
@@ -57,5 +59,11 @@ public class MultilingualService {
         }
         return Key;
     }
+
+    public static void ShowDebugInfo(String ShowInfo, Object... args) {
+        final Logger LOGGER = LogUtils.getLogger();
+        LOGGER.debug(String.format(ShowInfo, args));
+    }
 }
+
 
