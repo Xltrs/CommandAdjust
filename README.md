@@ -9,12 +9,12 @@ This is a **command permission level modify** and **operator adjust** mod,**feat
 ## 😃 Please take note before using this mod!
 
 🔗 This mod is based on **minecraft original permission level system**,so **you need to know**:
--  Minecraft have **5 permission levels**
+-  Minecraft has **5 permission levels**
    - Like : 0(All)🤓,1(Moderator)😄,2(Gamemaster)🤠,3(Admin)😎,4(Owner)😇
    - If you **want to learn more**,please go to **[Here](https://minecraft.wiki/w/Permission_level)**
   
-🔧 If you want to use this mod **to your server**,then **you need know** how to **modify server config** and **what do they work**.
-- You can **learn more to** **[Here](https://minecraft.wiki/w/Server.properties)**
+🔧 If you want to use this mod **to your server**,then **you need to know** how to **modify server config** and **what do they work**.
+- And you can **learn more about this at** **[Here](https://minecraft.wiki/w/Server.properties)**.
 
  ## 🤔 How to use this mod?
   
@@ -31,8 +31,8 @@ Just use these command:
 ```
 
 ## 😮 What are they each used for?
- "setcmdlevel" command 🔧
-It can **modify any commands permission level**😄,for example this example🧐,it **can modify** "give" command permission level **to 0**🔧,**then everyone can use it**:
+ ```setcmdlevel``` command 🔧
+It can **modify any commands permission level**😄,for example this example🧐,it **can modify** ```give``` command permission level **to 0**🔧,**then everyone can use it**:
 ```
 /setcmdlevel give 0
 ```
@@ -42,26 +42,26 @@ It can **modify any commands permission level**😄,for example this example🧐
 /setcmdlevel stop 0
 ```
 
- "delcmdconfig" command 💾
-It can **let any commands** in config form **config level back to original level**😄,for example this example🧐,it **can delete** "give" command **level config**💾,then "give" command **back to level 2**:
+ ```delcmdconfig``` command 💾
+It can **let any commands** in config form **config level back to original level**😄,for example this example🧐,it **can delete** ```give``` command **level config**💾,then ```give``` command **back to level 2**:
 
 ```
 /delcmdconfig give
 ```
 
- "checkcmdlevel" command 🔍
-It **can check** any command **config or original level**😃,for example this example,it can check "give" command **original level**🔍:
+ ```checkcmdlevel``` command 🔍
+It **can check** any command **config or original level**😃,for example this example,it can check ```give``` command **original level**🔍:
 
 ```
 /checkcmdlevel raw give
 ```
-And this example,it can check "give" command **config level**🔎:
+And this example,it can check ```give``` command **config level**🔎:
 
 ```
 /checkcmdlevel config give
 ```
 
- "checkcmdconfiglist" command 📠
+ ```checkcmdconfiglist``` command 📠
 It **can check** all command **config**😊,not need **any parameter**📠,this example just can run:
 
 ```
@@ -88,9 +88,9 @@ Show **debug info**📺 (on by default)
  - ModifyCommandLevelList
 
 ## 😁 Reminder
-- Don't modify **"execute"** command permission level **below 2**🤨,because "execute" command have a **privilege escalation bug**,it will be **let player** can use some parameter to **run any advanced commands(level 2 and below)** 😱,although **can't run** **level 3** and **above commands**😏,but it still **risk**🤕🎯.
+- Don't modify ```execute``` command permission level **below 2**🤨,because ```execute``` command have a **privilege escalation bug**,it will be **let player** can use some parameter to **run any advanced commands(level 2 and below)** 😱,although **can't run** **level 3** and **above commands**😏,but it still **risk**🤕🎯.
  
-- If you want to **modify [WorldEdit](https://modrinth.com/plugin/worldedit) mod command**🧐,please **wrap in double quotes**,and **remember** don't type "//XXX",but rather type "/XXX"😄.
+- If you want to **modify [WorldEdit](https://modrinth.com/plugin/worldedit) mod command**🧐,please **wrap in double quotes**,for example modify ```//pos1``` command,you should type ```/setcmdlevel "/pos1" 2```,no ```/setcmdlevel "//pos1" 2```😄.
   
 - Don't **type invalid configuration in config file**,it will be let mod **stop working**😊.
 
