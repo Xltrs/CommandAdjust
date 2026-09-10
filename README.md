@@ -2,7 +2,7 @@
 This is a **command permission level modify** and **operator adjust** mod,**features**:
 - ⚡ **Modify** any **command permission level** in **real time**.
 - 🐇 **Lightweight** and **easy to use**.
-- 🧱 **Good Compatibility** with other mods. (_Except for similar mods,I can't be sure they are compatibility_)
+- 🧱 **Good Compatibility** with other mods. (_Except for similar mods,I can't be sure they are compatible_)
 - 🧷 **Highly configurable**.
 - 🔒 **Security**.
 
@@ -13,7 +13,7 @@ This is a **command permission level modify** and **operator adjust** mod,**feat
    - Like : 0(All)🤓,1(Moderator)😄,2(Gamemaster)🤠,3(Admin)😎,4(Owner)😇
    - If you **want to learn more**,please go to **[Here](https://minecraft.wiki/w/Permission_level)**
   
-🔧 If you want to use this mod **to your server**,then **you need to know** how to **modify server config** and **what do they work**.
+🔧 If you want to use this mod **to your server**,then **you need to know** how to **modify server config** and **how they work**.
 - And you can **learn more about this at** **[Here](https://minecraft.wiki/w/Server.properties)**.
 
  ## 🤔 How to use this mod?
