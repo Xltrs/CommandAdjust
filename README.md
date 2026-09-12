@@ -32,6 +32,7 @@ Just use these command:
 
 ## 😮 What are they each used for?
  ```setcmdlevel``` command 🔧
+ 
 It can **modify any commands permission level**😄,for example this example🧐,it **can modify** ```give``` command permission level **to 0**🔧,**then everyone can use it**:
 ```
 /setcmdlevel give 0
@@ -43,6 +44,7 @@ It can **modify any commands permission level**😄,for example this example🧐
 ```
 
  ```delcmdconfig``` command 💾
+ 
 It can **let any commands** in config form **config level back to original level**😄,for example this example🧐,it **can delete** ```give``` command **level config**💾,then ```give``` command **back to level 2**:
 
 ```
@@ -50,6 +52,7 @@ It can **let any commands** in config form **config level back to original level
 ```
 
  ```checkcmdlevel``` command 🔍
+ 
 It **can check** any command **config or original level**😃,for example this example,it can check ```give``` command **original level**🔍:
 
 ```
@@ -62,6 +65,7 @@ And this example,it can check ```give``` command **config level**🔎:
 ```
 
  ```checkcmdconfiglist``` command 📠
+ 
 It **can check** all command **config**😊,not need **any parameter**📠,this example just can run:
 
 ```
