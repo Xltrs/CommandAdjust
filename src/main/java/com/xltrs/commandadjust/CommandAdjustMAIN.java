@@ -1,6 +1,7 @@
 package com.xltrs.commandadjust;
 
 import com.xltrs.multilinguallib.MultilingualService;
+import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
@@ -11,22 +12,31 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-import java.io.IOException;
-
 //只是主类，主类通常是不放实际性代码的，说白了就是个入口(*^_^*)
+//别信上面那行字，他乱说的( ﹁ ﹁ )
 @Mod(CommandAdjustMAIN.MODID)
 public class CommandAdjustMAIN {
     public static final String MODID = "commandadjust";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public CommandAdjustMAIN(IEventBus modEventBus, ModContainer modContainer) throws IOException {
+    //注册基本信息
+    public CommandAdjustMAIN(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         MultilingualService.Register(MODID);
     }
 
+    //注册服务器启动时要做的事情
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+        HMCacheKernel.BuildCCLData();
         LOGGER.info("Command Adjust Mod has been loaded");
     }
+
+    //注册/reload时要做的事情
+    @SubscribeEvent
+    public void ReBuildCache(AddReloadListenerEvent event) {
+        HMCacheKernel.ReloadCache();
+    }
+
 }

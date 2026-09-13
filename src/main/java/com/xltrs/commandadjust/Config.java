@@ -18,9 +18,9 @@ public class Config {
     public static final ModConfigSpec.ConfigValue<Boolean> CommandAdjustShowDebug = BUILDER
             .comment("Make debug info visible")
             .define("ShowDebug", false);
-    //是否不能删除4级指令的配置项，需要和4级指令保护一起开(难道有需要单独开这玩意的场景？有了再删个if语句也不迟)
+    //是否不能删除4级指令的配置项，现已不需要和4级指令保护一起开(难道有需要单独开这玩意的场景？有了再删个if语句也不迟，反正现在已经删了)
     public static final ModConfigSpec.ConfigValue<Boolean> CannotDeleteKeyCommandConfig = BUILDER
-            .comment("Forbidden delete level 4 command config,it needs open KeyCommandProtection to work")
+            .comment("Forbidden delete level 4 command config")
             .define("CannotDeleteKeyCommandConfig", false);
     //关键指令保护，也就是不能修改4级指令的等级
     public static final ModConfigSpec.ConfigValue<Boolean> KeyCommandGuard = BUILDER
@@ -29,7 +29,7 @@ public class Config {
     //本模组的核心！指令等级修改的配置列表
     public static final ModConfigSpec.ConfigValue<List<? extends String>> CommandModifyList = BUILDER
             .comment("This is modify command permission level list")
-            .defineList("ModifyCommandLevelList", List.of("setcmdlevel:4", "checkcmdlevel:0", "delcmdconfig:4"),
+            .defineList("CommandLevelConfigList", List.of("setcmdlevel:4", "checkcmdlevel:0", "delcmdconfig:4"),
                     obj -> {
                         if (!(obj instanceof String entry)) return false;
                         String[] parts = entry.split(":");

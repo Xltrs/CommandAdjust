@@ -1,0 +1,14 @@
+{
+  "commandadjust.command.not.exist": "La commande %s n'existe pas",
+  "commandadjust.command.not.existinconfig": "La commande %s n'existe pas dans la configuration",
+  "commandadjust.command.cannot.modify.level4command": "Impossible de modifier la commande %s, car c'est une commande de niveau 4",
+  "commandadjust.command.cannot.configleveltorawlevel": "Impossible de modifier le niveau de configuration de la commande %s (%s) vers le niveau d'origine (%s)",
+  "commandadjust.command.modify.level.success": "Commande %s modifiée au niveau %s avec succès",
+  "commandadjust.command.modify.execute.warning": "Mais attention : modifier la commande execute en dessous du niveau 2 peut permettre aux joueurs d'utiliser un bug pour exécuter n'importe quelle commande",
+  "commandadjust.command.cannot.del.level4command.config": "Impossible de supprimer la configuration de la commande %s, car c'est une commande de niveau 4",
+  "commandadjust.command.del.config.success": "Configuration de la commande %s supprimée avec succès",
+  "commandadjust.command.check.rawlevel": "Le niveau d'origine de la commande %s est %s",
+  "commandadjust.command.check.configlevel.cmdnotexistingame": "Le niveau de configuration de la commande %s est %s, mais la commande %s n'existe pas dans le jeu",
+  "commandadjust.command.check.configlevel": "Le niveau de configuration de la commande %s est %s",
+  "commandadjust.command.checklist": "[Liste de configuration des niveaux de commandes]"
+}

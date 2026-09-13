@@ -65,5 +65,3 @@ public class MultilingualService {
         LOGGER.debug(String.format(ShowInfo, args));
     }
 }
-
-

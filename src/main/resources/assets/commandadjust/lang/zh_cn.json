@@ -2,7 +2,7 @@
   "commandadjust.command.not.exist": "%s 指令不存在",
   "commandadjust.command.not.existinconfig": "%s 指令在配置中不存在",
   "commandadjust.command.cannot.modify.level4command": "不能修改 %s 指令，因为它是4级指令",
-  "commandadjust.command.cannot.configleveltorawlevel": "不能修改 %s 指令的配置等级(%s)与原始等级(%s)相等",
+  "commandadjust.command.cannot.configleveltorawlevel": "不能修改 %s 指令的配置等级(%s)为原始等级(%s)",
   "commandadjust.command.modify.level.success": "修改 %s 指令权限为 %s 等级成功",
   "commandadjust.command.modify.execute.warning": "但请注意，修改 execute 指令的权限等级低于2级会让玩家可以使用一些漏洞去执行任何指令",
   "commandadjust.command.cannot.del.level4command.config": "不能删除 %s 指令的权限配置，因为它是4级指令",

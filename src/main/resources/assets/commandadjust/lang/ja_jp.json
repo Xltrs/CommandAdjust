@@ -1,0 +1,14 @@
+{
+	"commandadjust.command.not.exist": "%s コマンドは存在しません",
+	"commandadjust.command.not.existinconfig": "%s コマンドは設定に存在しません",
+	"commandadjust.command.cannot.modify.level4command": "%s コマンドはレベル4のコマンドのため変更できません",
+	"commandadjust.command.cannot.configleveltorawlevel": "%s コマンドの設定レベル(%s)を元のレベル(%s)に変更できません",
+	"commandadjust.command.modify.level.success": "%s コマンドをレベル %s に変更しました",
+	"commandadjust.command.modify.execute.warning": "ただし注意: execute コマンドをレベル2未満に変更すると、プレイヤーがバグを利用して任意のコマンドを実行できる可能性があります",
+	"commandadjust.command.cannot.del.level4command.config": "%s コマンドはレベル4のコマンドのため、設定を削除できません",
+	"commandadjust.command.del.config.success": "%s コマンドの設定を削除しました",
+	"commandadjust.command.check.rawlevel": "%s コマンドの元のレベルは %s です",
+	"commandadjust.command.check.configlevel.cmdnotexistingame": "%s コマンドの設定レベルは %s ですが、%s コマンドはゲーム内に存在しません",
+	"commandadjust.command.check.configlevel": "%s コマンドの設定レベルは %s です",
+	"commandadjust.command.checklist": "[コマンドレベル設定リスト]"
+}
