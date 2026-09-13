@@ -89,7 +89,7 @@ Show **debug info**📺 (on by default)
  - KeyCommandProtection
   
 **Modify** command permission level **list**,have some **example** to you **reference to modify** this list🔧
- - ModifyCommandLevelList
+ - CommandLevelConfigList
 
 ## 😁 Reminder
 - Don't modify ```execute``` command permission level **below 2**🤨,because ```execute``` command have a **privilege escalation bug**,it will be **let player** can use some parameter to **run any advanced commands(level 2 and below)** 😱,although **can't run** **level 3** and **above commands**😏,but it still **risk**🤕🎯.
