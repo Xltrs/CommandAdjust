@@ -82,7 +82,7 @@ Show **debug info**📺 (on by default)
 **Make** debug **info visible**📑 (off by default)
  - ShowDebug
   
-**Forbidden** delete **level 4 command** config,it needs open **KeyCommandProtection** to work🧤 (off by default)
+**Forbidden** delete **level 4 command** config🧤 (off by default)
  - CannotDeleteKeyCommandConfig
  
 **Forbidden** modify **level 4** command🔒 (on by default)
