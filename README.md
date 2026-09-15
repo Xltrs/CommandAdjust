@@ -92,30 +92,35 @@ Show **debug info**📺 (on by default)
  - CommandLevelConfigList
 
 ## 😁 Reminder
-- Don't modify ```execute``` command permission level **below 2**🤨,because ```execute``` command have a **privilege escalation bug**,it will be **let player** can use some parameter to **run any advanced commands(level 2 and below)** 😱,although **can't run** **level 3** and **above commands**😏,but it still **risk**🤕🎯.
- 
-- If you want to **modify [WorldEdit](https://modrinth.com/plugin/worldedit) mod command**🧐,please **wrap in double quotes**,for example modify ```//pos1``` command,you should type ```/setcmdlevel "/pos1" 2```,no ```/setcmdlevel "//pos1" 2```😄.
+Never modify ```execute``` command permission level **below 2**🤨,because ```execute``` command have a **privilege escalation bug**,it will be **let player** can use some parameter to **run any advanced commands(level 2 and below)** 😱,although **can't run** **level 3** and **above commands**😏,but it still **risk**😒.
+
+If you want to **modify [WorldEdit](https://modrinth.com/plugin/worldedit) mod command**🧐,please **wrap in double quotes**,for example modify ```//pos1``` command,you should type:
   
-- Don't **type invalid configuration in config file**,it will be let mod **stop working**😊.
+  ```/setcmdlevel "/pos1" 2```
+
+ But don't type: 
+
+  ```/setcmdlevel "//pos1" 2```
+
 
 ## 🤗 FAQ
 **Can I include this mod in my modpack? I want to let player cheat within the allowed limits😁.**
- - **Absolutely**! You can **include it in any modpack** without asking for permission😉. 
+ - **Of course**. You can **include it in any modpack** without asking for permission😉. 
 
-**What should I do at a command exist in config but not exist in game command😰?**
+**What should I do at unknow command in config file🤔?**
  - Please use **"delcmdconfig"** command or **modify config file**,they **can all fix this problem**😏.
    
 **Why don't fix "execute" command bug😠?**
  - Although I added **coping method**,but i can't **guarantee** there is **no way** to **get around it**😂.
    
 **Why do i can't see downgraded command🤔?**
- - Because i don't know how to **modify command completion**,but i will be **fixed** this bug **in future**😅.
+ - Because i don't know how to **modify command completion**,but i will **fix** this bug **in future**😅.
 
 **A command can't see but downgraded to i can run it level,can it run🤨?**
- - **Of course**,it still **can run**,just you **can't see** it😉.
+ - **Of course**,it still **can run**,just you **can't see** it😅.
 
-**Which this mod or [LuckPerms](https://modrinth.com/plugin/luckperms) is better🤨?**
- - Can't say who is the **best**,need **depends** on your **situation**😄. If your server is **small** or **medium**,can **choose this mod**🤗;but if your server is **big**,please **choose [LuckPerms](https://modrinth.com/plugin/luckperms)** 😅.
+**Which this mod or [LuckPerms](https://modrinth.com/plugin/luckperms) is better😏?**
+ - Can't say who is the **best**,need **depends** on your **situation**😄. If your server is **small** or **medium**,can **choose this mod**🤗;but if your server is **big**,please **choose [LuckPerms](https://modrinth.com/plugin/luckperms)** 😓.
 
-**Why "checkcmdlevel" command is work abnormality? although it say a command not exist in game,but that command is exist in game! 😱**
- - Do you use this mod in **Singleplayer**? This mod will **appear this bug** in singleplayer **at sometime**,you can **check debug log** to **figure out the problem** 🤗.
+**Why "checkcmdlevel" command deos work abnormality? although it say a command does not exist in game,but that command does exist in game? 😒**
+ - Do you use this mod in **Singleplayer**? This mod will **appear this bug** in singleplayer **at sometime**,you can **check debug log** to **figure out the problem** 😓.
