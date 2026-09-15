@@ -122,5 +122,5 @@ If you want to **modify [WorldEdit](https://modrinth.com/plugin/worldedit) mod c
 **Which this mod or [LuckPerms](https://modrinth.com/plugin/luckperms) is better😏?**
  - Can't say who is the **best**,need **depends** on your **situation**😄. If your server is **small** or **medium**,can **choose this mod**🤗;but if your server is **big**,please **choose [LuckPerms](https://modrinth.com/plugin/luckperms)** 😓.
 
-**Why "checkcmdlevel" command deos work abnormality? although it say a command does not exist in game,but that command does exist in game? 😒**
+**Why "checkcmdlevel" command does work abnormality? although it say a command does not exist in game,but that command does exist in game? 😒**
  - Do you use this mod in **Singleplayer**? This mod will **appear this bug** in singleplayer **at sometime**,you can **check debug log** to **figure out the problem** 😓.
