@@ -31,25 +31,41 @@ Just use these command:
 ```
 
 ## 😮 What are they each used for?
+
+---
+
  ```setcmdlevel``` command 🔧
  
-It can **modify any commands permission level**😄,for example this example🧐,it **can modify** ```give``` command permission level **to 0**🔧,**then everyone can use it**:
+It can **modify any commands permission level**😄,for example this example🧐,it **will modify** ```give``` command permission level **to 0**🔧,**then everyone can use it**:
 ```
 /setcmdlevel give 0
 ```
-**But just please note**🤨,it **can't modify** any **level 4** commands😏,for example this example,**It won't work**:
+**But just please note**🤨,it **can't modify** any **level 4 commands**😏,for example this example,**it won't work**:
 
 ```
 /setcmdlevel stop 0
 ```
 
+And it can still **disable any command**😮,for example this example,**it will disable ```give``` command**😲:
+```
+/setcmdlevel give 5
+```
+Then **everyone can't use ```give``` command**,**even if you are owner**😂. (because **vanilla has no level 5 permission**)
+
+And you **can't disable ```setcmdlevel``` command**😏.
+
+
+---
+
  ```delcmdconfig``` command 💾
  
-It can **let any commands** in config form **config level back to original level**😄,for example this example🧐,it **can delete** ```give``` command **level config**💾,then ```give``` command **back to level 2**:
+It can **let any commands** in config form **config level back to original level**😄,for example this example🧐,it **will delete** ```give``` command **level config**💾,then ```give``` command **back to level 2**:
 
 ```
 /delcmdconfig give
 ```
+
+---
 
  ```checkcmdlevel``` command 🔍
  
@@ -64,16 +80,20 @@ And this example,it can check ```give``` command **config level**🔎:
 /checkcmdlevel config give
 ```
 
+---
+
  ```checkcmdconfiglist``` command 📠
  
-It **can check** all command **config**😊,not need **any parameter**📠,this example just can run:
+It **can check** all command **config**😊,not need **any parameter**📠,this example can use directly:
 
 ```
 /checkcmdconfiglist
 ```
 
-## 🔧 About configurable
-**Forbidden** modify command **config level back to raw level**😮 (on by default)
+---
+
+## 🔧 About configurable
+**Prevent** modify command **config level back to raw level**😮 (on by default)
  - CannotModifyCommandConfigLevelToRawLevel
   
 Show **debug info**📺 (on by default)
@@ -81,11 +101,14 @@ Show **debug info**📺 (on by default)
   
 **Make** debug **info visible**📑 (off by default)
  - ShowDebug
+
+**Print Command Adjust logo in server starting**📟 (on by default)
+- CommandAdjustLogoPrint
   
-**Forbidden** delete **level 4 command** config🧤 (off by default)
+**Prevent** delete **level 4 command** config🧤 (off by default)
  - CannotDeleteKeyCommandConfig
  
-**Forbidden** modify **level 4** command🔒 (on by default)
+**Prevent** modify **level 4** command🔒 (on by default)
  - KeyCommandProtection
   
 **Modify** command permission level **list**,have some **example** to you **reference to modify** this list🔧
