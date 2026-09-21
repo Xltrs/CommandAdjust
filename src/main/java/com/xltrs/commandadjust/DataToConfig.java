@@ -13,7 +13,7 @@ public class DataToConfig {
         CommandList.add(CommandName + ":" + CommandLevel);
         Config.CommandModifyList.set(CommandList);
         Config.SPEC.save();
-        Debug.show("[DataToConfig] Modify %s command at level %s Success", CommandName, CommandLevel);
+        Logshow.debug("[DataToConfig] Modify %s command at level %s Success", CommandName, CommandLevel);
     }
 
     public static void Delete(String CommandName) {
@@ -22,7 +22,7 @@ public class DataToConfig {
         CommandList.removeIf(e -> e.startsWith(CommandName + ":"));
         Config.CommandModifyList.set(CommandList);
         Config.SPEC.save();
-        Debug.show("[DataToConfig] Delete %s command config Success", CommandName);
+        Logshow.debug("[DataToConfig] Delete %s command config Success", CommandName);
     }
 
 }

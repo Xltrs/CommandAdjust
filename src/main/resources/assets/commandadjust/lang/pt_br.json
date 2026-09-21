@@ -2,7 +2,6 @@
   "commandadjust.command.not.exist": "O comando %s não existe",
   "commandadjust.command.not.existinconfig": "O comando %s não existe na configuração",
   "commandadjust.command.cannot.modify.level4command": "Não é possível modificar o comando %s, pois é um comando de nível 4",
-  "commandadjust.command.cannot.configleveltorawlevel": "Não é possível modificar o nível de configuração do comando %s (%s) para o nível original (%s)",
   "commandadjust.command.modify.level.success": "Comando %s modificado para o nível %s com sucesso",
   "commandadjust.command.modify.execute.warning": "Mas atenção: modificar o comando execute para um nível inferior a 2 pode permitir que os jogadores usem um bug para executar qualquer comando",
   "commandadjust.command.cannot.del.level4command.config": "Não é possível excluir a configuração do comando %s, pois é um comando de nível 4",
@@ -10,5 +9,7 @@
   "commandadjust.command.check.rawlevel": "O nível original do comando %s é %s",
   "commandadjust.command.check.configlevel.cmdnotexistingame": "O nível de configuração do comando %s é %s, mas o comando %s não existe no jogo",
   "commandadjust.command.check.configlevel": "O nível de configuração do comando %s é %s",
-  "commandadjust.command.checklist": "[Lista de configuração de níveis de comandos]"
+  "commandadjust.command.checklist": "[Lista de configuração de níveis de comandos]",
+  "commandadjust.command.prevent.disable.setcmdlevel": "Não é possível desativar o comando setcmdlevel",
+  "commandadjust.command.disable.success": "Comando %s desativado com sucesso"
 }

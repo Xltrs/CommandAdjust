@@ -10,7 +10,7 @@ public class HMCacheKernel {
 
     //这个是刷新所有数据用的，不然呢？awa
     public static void ReloadCache() {
-        Debug.show("[HMCacheKernel] Reload Cache");
+        Logshow.debug("[HMCacheKernel] Reload Cache");
         CommandRawLevel.clear();
         CommandConfigLevel.clear();
         BuildCCLData();
@@ -39,7 +39,7 @@ public class HMCacheKernel {
     }
 
     public static void BuildCCLData() {
-        Debug.show("[HMCacheKernel] Build command config level cache");
+        Logshow.debug("[HMCacheKernel] Build command config level cache");
         for (String entry : Config.CommandModifyList.get()) {
             String[] parts = entry.split(":");
             if (parts.length == 2) {

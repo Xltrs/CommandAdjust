@@ -2,7 +2,6 @@
   "commandadjust.command.not.exist": "Befehl %s existiert nicht",
   "commandadjust.command.not.existinconfig": "Befehl %s existiert nicht in der Konfiguration",
   "commandadjust.command.cannot.modify.level4command": "Befehl %s kann nicht geändert werden, da es ein Befehl der Stufe 4 ist",
-  "commandadjust.command.cannot.configleveltorawlevel": "Konfigurationsstufe von Befehl %s (%s) kann nicht auf ursprüngliche Stufe (%s) geändert werden",
   "commandadjust.command.modify.level.success": "Befehl %s erfolgreich auf Stufe %s gesetzt",
   "commandadjust.command.modify.execute.warning": "Aber beachten Sie: Wenn Sie den Befehl execute auf unter Stufe 2 setzen, können Spieler einen Fehler ausnutzen, um beliebige Befehle auszuführen",
   "commandadjust.command.cannot.del.level4command.config": "Konfiguration von Befehl %s kann nicht gelöscht werden, da es ein Befehl der Stufe 4 ist",
@@ -10,5 +9,7 @@
   "commandadjust.command.check.rawlevel": "Ursprüngliche Stufe von Befehl %s ist %s",
   "commandadjust.command.check.configlevel.cmdnotexistingame": "Konfigurationsstufe von Befehl %s ist %s, aber Befehl %s existiert nicht im Spiel",
   "commandadjust.command.check.configlevel": "Konfigurationsstufe von Befehl %s ist %s",
-  "commandadjust.command.checklist": "[Liste der Befehlsstufen-Konfiguration]"
+  "commandadjust.command.checklist": "[Liste der Befehlsstufen-Konfiguration]",
+  "commandadjust.command.prevent.disable.setcmdlevel": "Der Befehl setcmdlevel kann nicht deaktiviert werden",
+  "commandadjust.command.disable.success": "Befehl %s erfolgreich deaktiviert"
 }

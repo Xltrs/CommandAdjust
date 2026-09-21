@@ -13,34 +13,34 @@ public class CheckCommand {
         Integer CommandRawLevelInCache = HMCacheKernel.GetCRLData(CommandName);
 //使用HashMap缓存来快速获取指令等级结果ˋ( ° ▽、° )
         if (CommandRawLevelInCache != null) {
-            Debug.show("[CheckCommand API] Cache hit,Check %s command raw level is %s", CommandName, CommandRawLevelInCache);
+            Logshow.debug("[CheckCommand API] Cache hit,Check %s command raw level is %s", CommandName, CommandRawLevelInCache);
             return CommandRawLevelInCache;
         }
 
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
 
         if (server == null) { //单人模式下ServerLifecycleHooks.getCurrentServer()会抽风，故添加说明T_T
-            Debug.show("[CheckCommand API] ServerLifecycleHooks.getCurrentServer() return null,can not continue check %s command raw level", CommandName);
+            Logshow.debug("[CheckCommand API] ServerLifecycleHooks.getCurrentServer() return null,can not continue check %s command raw level", CommandName);
             return -1;
         }
 
         CommandNode<CommandSourceStack> node = server.getCommands().getDispatcher().getRoot().getChild(CommandName);
 
         if (node == null) {
-            Debug.show("[CheckCommand API] Cache no hit,%s Command does not exist in game", CommandName);
+            Logshow.debug("[CheckCommand API] Cache no hit,%s Command does not exist in game", CommandName);
             return -1;
         }
 
         for (int level = 0; level <= 4; level++) {
             CommandSourceStack FakeSource = server.createCommandSourceStack().withPermission(level);
             if (node.canUse(FakeSource)) {
-                Debug.show("[CheckCommand API] Cache no hit,Check %s command raw level is %s", CommandName, level);
+                Logshow.debug("[CheckCommand API] Cache no hit,Check %s command raw level is %s", CommandName, level);
                 HMCacheKernel.AddCRLData(CommandName, level);
                 return level;
             }
         }
 //下面这是保底，不是多余
-        Debug.show("[CheckCommand API] Cache no hit,Check %s command raw level is 4", CommandName);
+        Logshow.debug("[CheckCommand API] Cache no hit,Check %s command raw level is 4", CommandName);
         return 4;
     }
 
@@ -48,10 +48,10 @@ public class CheckCommand {
     public static int ConfigLevel(String CommandName) {
         Integer ConfigLevel = HMCacheKernel.GetCCLData(CommandName);
         if (ConfigLevel != null) {
-            Debug.show("[CheckCommand API] Check %s command config level is %s", CommandName, ConfigLevel);
+            Logshow.debug("[CheckCommand API] Check %s command config level is %s", CommandName, ConfigLevel);
             return ConfigLevel;
         } else {
-            Debug.show("[CheckCommand API] %s command is not exist in config", CommandName);
+            Logshow.debug("[CheckCommand API] %s command is not exist in config", CommandName);
             return -1;
         }
     }

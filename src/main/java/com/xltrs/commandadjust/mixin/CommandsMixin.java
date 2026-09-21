@@ -2,7 +2,7 @@ package com.xltrs.commandadjust.mixin;
 
 import com.mojang.brigadier.ParseResults;
 import com.xltrs.commandadjust.CheckCommand;
-import com.xltrs.commandadjust.Debug;
+import com.xltrs.commandadjust.Logshow;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import org.spongepowered.asm.mixin.Mixin;
@@ -28,12 +28,12 @@ public abstract class CommandsMixin {
         int ConfigLevel = CheckCommand.ConfigLevel(CommandName);
         int RawLevel = CheckCommand.RawLevel(CommandName);
 
-        Debug.show("[Command Run] %s try to run %s command,start to check", Source.getTextName(), CommandName);
+        Logshow.debug("[Command Run] %s try to run %s command,start to check", Source.getTextName(), CommandName);
 
         //严重bug修复:execute指令，它可以用run参数来执行任何2级及以下的指令，必须严肃处理(* ￣︿￣ )
         if (CommandName.equals("execute")) {
 
-            Debug.show("[Command Run] Discover %s try to use execute command,start to special check", Source.getTextName());
+            Logshow.debug("[Command Run] Discover %s try to use execute command,start to special check", Source.getTextName());
 
             int LastRunIndex = Command.lastIndexOf(" run "); //找到最后一个run的位置
             if (LastRunIndex != -1) { //-1就是不存在run，可以跳过
@@ -47,19 +47,19 @@ public abstract class CommandsMixin {
                 int InnerRawLevel = CheckCommand.RawLevel(InnerCommand);
 
                 if (InnerRawLevel == -1) { //不存在的指令检查
-                    Debug.show("[Command Run] Intercepted %s use execute command to run unknown command(%s)", Source.getTextName(), InnerCommand);
+                    Logshow.debug("[Command Run] Intercepted %s use execute command to run unknown command(%s)", Source.getTextName(), InnerCommand);
                     CI.cancel();
                     return;
                 }
 
                 if (InnerConfigLevel != -1 && !Source.hasPermission(InnerConfigLevel)) { //是否存在于配置文件的指令检查
-                    Debug.show("[Command Run] Intercepted %s use execute command to privilege escalation run %s command(Level %s,has config)", Source.getTextName(), InnerCommand, InnerConfigLevel);
+                    Logshow.debug("[Command Run] Intercepted %s use execute command to privilege escalation run %s command(Level %s,has config)", Source.getTextName(), InnerCommand, InnerConfigLevel);
                     CI.cancel();
                     return;
                 }
 
                 if (InnerConfigLevel == -1 && !Source.hasPermission(InnerRawLevel)) { //无配置的指令检查
-                    Debug.show("[Command Run] Intercepted %s use execute command to privilege escalation run %s command(Level %s,no config)", Source.getTextName(), InnerCommand, InnerRawLevel);
+                    Logshow.debug("[Command Run] Intercepted %s use execute command to privilege escalation run %s command(Level %s,no config)", Source.getTextName(), InnerCommand, InnerRawLevel);
                     CI.cancel();
                     return;
                 }
@@ -67,17 +67,17 @@ public abstract class CommandsMixin {
         }
 
         if (RawLevel == -1) { //没这个指令? 那mojang你自己看着办吧 q(≧▽≦q)
-            Debug.show("[Command Run] %s run %s command,but it does not exist in game", Source.getTextName(), CommandName);
+            Logshow.debug("[Command Run] %s run %s command,but it does not exist in game", Source.getTextName(), CommandName);
             return;
         }
 
         if (ConfigLevel == -1) { //没配置就丢给原版代码处理 q(≧▽≦q)
-            Debug.show("[Command Run] %s run %s command,but command does not exist in config", Source.getTextName(), CommandName);
+            Logshow.debug("[Command Run] %s run %s command,but command does not exist in config", Source.getTextName(), CommandName);
             return;
         }
 
         if (Source.hasPermission(ConfigLevel) && Source.hasPermission(RawLevel)) {//大于等于配置等级且大于原版等级也丢回给原版代码处理 q(≧▽≦q)
-            Debug.show("[Command Run] %s run %s command,command does exist in config", Source.getTextName(), CommandName);
+            Logshow.debug("[Command Run] %s run %s command,command does exist in config", Source.getTextName(), CommandName);
             return;
         }
 
@@ -94,7 +94,7 @@ public abstract class CommandsMixin {
                                 Command
                         );
                 CI.cancel(); //原方法可以滚了(*^_^*)
-                Debug.show("[Command Run] %s command config level is %s,but %s level below raw level %s,so elevate privileges to %s to run %s command",
+                Logshow.debug("[Command Run] %s command config level is %s,but %s level below raw level %s,so elevate privileges to %s to run %s command",
                         CommandName,
                         ConfigLevel,
                         Source.getTextName(),
@@ -110,7 +110,7 @@ public abstract class CommandsMixin {
         }
 
         if (!Source.hasPermission(ConfigLevel)) { //检查执行者是不是不大于等于配置里的等级，虽然略绕awa
-            Debug.show("[Command Run] Intercept %s run %s command", Source.getTextName(), CommandName);
+            Logshow.debug("[Command Run] Intercept %s run %s command", Source.getTextName(), CommandName);
             CI.cancel();
         }
 

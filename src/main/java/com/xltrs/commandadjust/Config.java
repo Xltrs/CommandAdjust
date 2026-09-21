@@ -8,8 +8,12 @@ public class Config {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     //是否不可以将指令的配置等级设为原始等级，长难句这一块
     public static final ModConfigSpec.ConfigValue<Boolean> CannotModifyCommandConfigLevelToRawLevel = BUILDER
-            .comment("Forbidden modify command config level back to raw level")
+            .comment("Prevent modify command config level back to raw level")
             .define("CannotModifyCommandConfigLevelToRawLevel", true);
+    //在服务端启动时打印本模组logo的ASCII艺术字
+    public static final ModConfigSpec.ConfigValue<Boolean> CommandAdjustLogoPrint = BUILDER
+            .comment("Print Command Adjust logo in server starting")
+            .define("CommandAdjustLogoPrint", true);
     //Debug选项，字面意思
     public static final ModConfigSpec.ConfigValue<Boolean> CommandAdjustDebug = BUILDER
             .comment("Show debug info.")
@@ -20,12 +24,12 @@ public class Config {
             .define("ShowDebug", false);
     //是否不能删除4级指令的配置项，现已不需要和4级指令保护一起开(难道有需要单独开这玩意的场景？有了再删个if语句也不迟，反正现在已经删了)
     public static final ModConfigSpec.ConfigValue<Boolean> CannotDeleteKeyCommandConfig = BUILDER
-            .comment("Forbidden delete level 4 command config")
+            .comment("Prevent delete level 4 command config")
             .define("CannotDeleteKeyCommandConfig", false);
     //关键指令保护，也就是不能修改4级指令的等级
     public static final ModConfigSpec.ConfigValue<Boolean> KeyCommandGuard = BUILDER
-            .comment("Forbidden modify level 4 command")
-            .define("KeyCommandProtection", true);
+            .comment("Prevent modify level 4 command")
+            .define("KeyCommandGuard", true);
     //本模组的核心！指令等级修改的配置列表
     public static final ModConfigSpec.ConfigValue<List<? extends String>> CommandModifyList = BUILDER
             .comment("This is modify command permission level list")
@@ -37,7 +41,7 @@ public class Config {
                         if (parts[0].isBlank()) return false;
                         try {
                             int level = Integer.parseInt(parts[1]);
-                            return level >= 0 && level <= 4;
+                            return level >= 0 && level <= 5;
                         } catch (NumberFormatException e) {
                             return false;
                         }

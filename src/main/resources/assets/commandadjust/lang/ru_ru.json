@@ -2,7 +2,6 @@
   "commandadjust.command.not.exist": "Команда %s не найдена",
   "commandadjust.command.not.existinconfig": "Команда %s отсутствует в конфигурации",
   "commandadjust.command.cannot.modify.level4command": "Невозможно изменить команду %s: это команда 4-го уровня",
-  "commandadjust.command.cannot.configleveltorawlevel": "Невозможно изменить уровень конфигурации команды %s (%s) на исходный уровень (%s)",
   "commandadjust.command.modify.level.success": "Команда %s успешно установлена на уровень %s",
   "commandadjust.command.modify.execute.warning": "Обратите внимание: если установить уровень команды execute ниже 2-го, игроки смогут использовать ошибку для выполнения любых команд",
   "commandadjust.command.cannot.del.level4command.config": "Невозможно удалить конфигурацию команды %s: это команда 4-го уровня",
@@ -10,5 +9,7 @@
   "commandadjust.command.check.rawlevel": "Исходный уровень команды %s: %s",
   "commandadjust.command.check.configlevel.cmdnotexistingame": "Уровень конфигурации команды %s — %s, но команда %s не существует в игре",
   "commandadjust.command.check.configlevel": "Уровень конфигурации команды %s: %s",
-  "commandadjust.command.checklist": "[Список настроек уровней команд]"
+  "commandadjust.command.checklist": "[Список настроек уровней команд]",
+  "commandadjust.command.prevent.disable.setcmdlevel": "Невозможно отключить команду setcmdlevel",
+  "commandadjust.command.disable.success": "Команда %s успешно отключена"
 }
