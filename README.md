@@ -109,7 +109,7 @@ Show **debug info**📺 (on by default)
  - CannotDeleteKeyCommandConfig
  
 **Prevent** modify **level 4** command🔒 (on by default)
- - KeyCommandProtection
+ - KeyCommandGuard
   
 **Modify** command permission level **list**,have some **example** to you **reference to modify** this list🔧
  - CommandLevelConfigList
