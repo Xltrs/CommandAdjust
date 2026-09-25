@@ -1,0 +1,66 @@
+package com.xltrs.commandadjust;
+//Version 20260920
+
+import net.neoforged.neoforge.common.ModConfigSpec;
+
+import java.util.List;
+
+public class Config {
+    private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+
+    //是否不可以将指令的配置等级设为原始等级，长难句这一块
+    public static final ModConfigSpec.ConfigValue<Boolean> CannotModifyCommandConfigLevelToRawLevel = BUILDER
+            .comment("Prevent modify command config level back to raw level")
+            .define("CannotModifyCommandConfigLevelToRawLevel", true);
+
+    //在服务端启动时打印本模组logo的ASCII艺术字
+    public static final ModConfigSpec.ConfigValue<Boolean> CommandAdjustLogoPrint = BUILDER
+            .comment("Print Command Adjust logo in server starting")
+            .define("CommandAdjustLogoPrint", true);
+
+    //服务器是否可以完全不过检查就直接运行指令，禁用指令会不生效
+    public static final ModConfigSpec.ConfigValue<Boolean> ServerCanRunAnyCommand = BUILDER
+            .comment("Server can run any command,even if that command is disable")
+            .define("ServerCanRunAnyCommand", true);
+
+    //Debug选项，字面意思
+    public static final ModConfigSpec.ConfigValue<Boolean> CommandAdjustDebug = BUILDER
+            .comment("Show debug info")
+            .define("Debug", true);
+
+    //显示Debug信息，其实就是把debug级别改成info级别了
+    public static final ModConfigSpec.ConfigValue<Boolean> CommandAdjustShowDebug = BUILDER
+            .comment("Make debug info visible")
+            .define("ShowDebug", false);
+
+    //是否不能删除4级指令的配置项，现已不需要和4级指令保护一起开(难道有需要单独开这玩意的场景？有了再删个if语句也不迟，反正现在已经删了)
+    public static final ModConfigSpec.ConfigValue<Boolean> CannotDeleteKeyCommandConfig = BUILDER
+            .comment("Prevent delete level 4 command config")
+            .define("CannotDeleteKeyCommandConfig", false);
+
+    //关键指令保护，也就是不能修改4级指令的等级
+    public static final ModConfigSpec.ConfigValue<Boolean> KeyCommandGuard = BUILDER
+            .comment("Prevent modify level 4 command")
+            .define("KeyCommandGuard", true);
+
+    //本模组的核心！指令等级修改的配置列表
+    public static final ModConfigSpec.ConfigValue<List<? extends String>> CommandModifyList = BUILDER
+            .comment("This is modify command permission level list")
+            .defineList("CommandLevelConfigList", List.of("setcmdlevel:4", "checkcmdlevel:0", "delcmdconfig:4"),
+                    obj -> {
+                        if (!(obj instanceof String entry)) return false;
+                        String[] parts = entry.split(":");
+                        if (parts.length != 2) return false;
+                        if (parts[0].isBlank()) return false;
+                        try {
+                            int level = Integer.parseInt(parts[1]);
+                            return level >= 0 && level <= 5;
+                        } catch (NumberFormatException e) {
+                            return false;
+                        }
+                    }
+            );
+
+    static final ModConfigSpec SPEC = BUILDER.build();
+
+}
