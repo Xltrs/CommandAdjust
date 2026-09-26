@@ -13,7 +13,7 @@ import net.minecraft.world.phys.Vec3;
 //这个类其实一个API，可以用来查询指令是否存在与等级，但都快被自己人调用114514次了ヾ(^▽^*)))，平均一个指令用100次checkcommand (不是)
 public class CheckCommand {
     //创建一堆假身份来试
-    private static final CommandSourceStack TestSource_0 = new CommandSourceStack(CommandSource.NULL, Vec3.ZERO, Vec2.ZERO, null, 4, "TestSource", Component.literal("TestSource"), null, null);
+    private static final CommandSourceStack TestSource_0 = new CommandSourceStack(CommandSource.NULL, Vec3.ZERO, Vec2.ZERO, null, 0, "TestSource", Component.literal("TestSource"), null, null);
     private static final CommandSourceStack TestSource_1 = TestSource_0.withPermission(1);
     private static final CommandSourceStack TestSource_2 = TestSource_0.withPermission(2);
     private static final CommandSourceStack TestSource_3 = TestSource_0.withPermission(3);
