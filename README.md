@@ -82,6 +82,19 @@ And this example,it can check ```give``` command **config level**🔎:
 
 ---
 
+```slrcommand``` command🎨
+
+It can use **any permission level to run command**🎨,for example this example🧐,it will **use level 3 permission to run ```kick``` command**:
+```
+/slrcommand 3 kick @r
+```
+But you can't  **privilege escalation to run advanced command**😏,for example this example😮,if you **only have level 1 permission**🤔,**it won't work**:
+```
+/slrcommand 2 give @s diamond
+```
+
+---
+
  ```checkcmdconfiglist``` command 📠
  
 It **can check** all command **config**😊,not need **any parameter**📠,this example can use directly:
@@ -104,6 +117,9 @@ Show **debug info**📺 (on by default)
 
 **Print Command Adjust logo in server starting**📟 (on by default)
 - CommandAdjustLogoPrint
+
+**Server can run any command**,even if that command is disable🎭 (on by default)
+ - ServerCanRunAnyCommand
   
 **Prevent** delete **level 4 command** config🧤 (off by default)
  - CannotDeleteKeyCommandConfig
@@ -144,6 +160,3 @@ If you want to **modify [WorldEdit](https://modrinth.com/plugin/worldedit) mod c
 
 **Which this mod or [LuckPerms](https://modrinth.com/plugin/luckperms) is better😏?**
  - Can't say who is the **best**,need **depends** on your **situation**😄. If your server is **small** or **medium**,can **choose this mod**🤗;but if your server is **big**,please **choose [LuckPerms](https://modrinth.com/plugin/luckperms)** 😓.
-
-**Why "checkcmdlevel" command does work abnormality? although it say a command does not exist in game,but that command does exist in game? 😒**
- - Do you use this mod in **Singleplayer**? This mod will **appear this bug** in singleplayer **at sometime**,you can **check debug log** to **figure out the problem** 😓.
