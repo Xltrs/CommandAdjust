@@ -27,6 +27,8 @@ Just use these command:
 
 /checkcmdlevel <raw/config> <command name>
 
+/slrcommand <permission level> <command>
+
 /checkcmdconfiglist
 ```
 
